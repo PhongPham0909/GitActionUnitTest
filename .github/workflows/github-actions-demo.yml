@@ -13,4 +13,4 @@ jobs:
     steps:
     - uses: actions/checkout@v2 
     - name: Test
-      run: dotnet test --no-restore 
+      run: dotnet test --no-restore --filter FullyQualifiedName!~Android
