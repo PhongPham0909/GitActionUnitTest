@@ -15,7 +15,6 @@ jobs:
     runs-on: windows-latest
 
     steps:
-    - name: Install dependencies
-      run: dotnet restore .\UnitTestProject1\UnitTestProject1.csproj
+    - uses: actions/checkout@v2
     - name: Test
-      run: dotnet test ./UnitTestProject1/UnitTestProject1.csproj
+      run: dotnet test
