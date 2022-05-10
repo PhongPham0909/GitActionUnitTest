@@ -17,4 +17,4 @@ jobs:
     steps:
     
     - name: Test
-      run: dotnet test App1.sln
+      run: dotnet test .\UnitTestProject1
