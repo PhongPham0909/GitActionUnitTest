@@ -4,10 +4,6 @@ on:
   push:
   pull_request:
    branches: [ main ]
-
-env:
-  DOTNET_VERSION: '6.0.202' # The .NET SDK version to use
-
 jobs:
   build-and-test:
 
@@ -16,5 +12,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: dotnet restore .\UnitTestProject1\UnitTestProject1.csproj     
     - name: Test
-      run: dotnet test ./UnitTestProject1
+      run: dotnet test .\UnitTestProject1
