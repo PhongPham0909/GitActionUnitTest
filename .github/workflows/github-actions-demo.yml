@@ -6,7 +6,7 @@ on:
    branches: [ main ]
 
 env:
-  DOTNET_VERSION: '5.0.301' # The .NET SDK version to use
+  DOTNET_VERSION: '6.0.202' # The .NET SDK version to use
 
 jobs:
   build-and-test:
@@ -24,8 +24,9 @@ jobs:
     - name: Install dependencies
       run: dotnet restore
       
-    - name: Build
-      run: dotnet build --configuration Release --no-restore
+    #- name: Build
+    #  run: dotnet build --configuration Release --no-restore
     
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      #run: dotnet test --no-restore --verbosity normal
+      run: dotnet test 
