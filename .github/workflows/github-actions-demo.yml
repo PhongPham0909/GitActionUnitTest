@@ -17,4 +17,4 @@ jobs:
     steps:
     
     - name: Test
-      run: dotnet test ~/UnitTestProject1/UnitTestProject1.csproj
+      run: dotnet test .\UnitTestProject1\UnitTestProject1.csproj
